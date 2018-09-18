@@ -1,0 +1,17 @@
+md example.com zimbraAutoProvAccountNameMap "samAccountName"
+md example.com +zimbraAutoProvAttrMap displayName=displayName
+md example.com +zimbraAutoProvAttrMap givenName=givenName
+md example.com zimbraAutoProvAuthMech LDAP
+md example.com zimbraAutoProvBatchSize 40
+md example.com zimbraAutoProvLdapAdminBindDn "CN=ldapquery,CN=Users,DC=my,DC=local"
+md example.com zimbraAutoProvLdapAdminBindPassword ldaquerypwd
+md example.com zimbraAutoProvLdapBindDn "dc=my,dc=local"
+md example.com zimbraAutoProvLdapSearchBase "OU=SomeCity,dc=my,dc=local"
+md example.com zimbraAutoProvLdapSearchFilter "(cn=%u)"
+md example.com zimbraAutoProvLdapURL "ldaps://172.19.0.10:636"
+md example.com zimbraAutoProvMode EAGER
+md example.com zimbraAutoProvNotificationBody "Your account has been auto provisioned.  Your email address is ${ACCOUNT_ADDRESS}."
+md example.com zimbraAutoProvNotificationFromAddress prov-admin@example.com
+md example.com zimbraAutoProvNotificationSubject "New account auto provisioned"
+ms mail.example.com zimbraAutoProvPollingInterval "1m"
+ms mail.example.com +zimbraAutoProvScheduledDomains "example.com"

@@ -1,0 +1,6 @@
+archives.tar is a copy of /var/cache/apt/archives
+
+tar xvf zimbra-zcs-8.7.11.tar.gz
+cp -f utilfunc.sh zcs-8.7.11_GA_1854.UBUNTU16_64.20170531151956/util/
+cd utilfunc.sh zcs-8.7.11_GA_1854.UBUNTU16_64.20170531151956
+./install.sh

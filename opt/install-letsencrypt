@@ -1,0 +1,8 @@
+#!/bin/bash
+
+echo "---> INSTALL LETSENCRYPT CERTS"
+
+chown -R zimbra /opt/letsencrypt
+chmod 700 /opt/letsencrypt
+
+su - zimbra bash -c /opt/install-letsencrypt.zimbra

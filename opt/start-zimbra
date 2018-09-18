@@ -1,0 +1,3 @@
+service ssh start
+su - zimbra -c "source /opt/zimbra/.bashrc ; source /opt/zimbra/.bash_profile; zmcontrol start"
+

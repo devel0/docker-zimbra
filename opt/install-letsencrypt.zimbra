@@ -1,0 +1,12 @@
+#!/bin/bash
+
+echo "---> running install-letsencrypt.zimbra"
+
+cd /opt/letsencrypt/live/srv0.example.com
+
+cat fullchain.pem > crt.cer
+cat root.pem >> crt.cer
+zmcertmgr verifycrt comm privkey.pem fullchain.pem crt.cer
+cp privkey.pem /opt/zimbra/ssl/zimbra/commercial/commercial.key
+zmcertmgr deploycrt comm fullchain.pem crt.cer
+zmcontrol restart
