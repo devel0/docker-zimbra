@@ -30,3 +30,7 @@ zimbra mail, contact, calendar server docker
 ./build.sh
 ./run.sh
 ```
+
+# postinstall
+
+- [force smtp auth](https://wiki.zimbra.com/wiki/Enforcing_a_match_between_FROM_address_and_sasl_username_8.5)
